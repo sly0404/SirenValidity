@@ -24,6 +24,9 @@ public class SirenImpl implements Siren
 		char controlNumber = Character.forDigit(lastDigit, 10);
 		return sirenWithoutControlNumber + controlNumber;
 	}
+	
+	
+	
 	// compute the sum as described by the Lugh algorithm with full siren or siren without control number
 	
 	private int computeSirenSum(String sirenWithOrWithoutControlNumber)
@@ -31,7 +34,7 @@ public class SirenImpl implements Siren
 		int sum = 0;
 		for (int i=sirenWithOrWithoutControlNumber.length() - 1; i >= 0; i--)
 		{
-			if (!Character.isDigit(sirenWithOrWithoutControlNumber.charAt(i))) // siren must contsins only digits
+			if (!Character.isDigit(sirenWithOrWithoutControlNumber.charAt(i))) // siren must contains only digits
 				return -1;
 			else
 			{
